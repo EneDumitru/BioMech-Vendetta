@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8435390015683763607
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8435390015683763606}
+  - component: {fileID: 8435390015683763601}
+  m_Layer: 5
+  m_Name: ExperienceSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &8435390015683763606
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8435390015683763607}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8435390015683763601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8435390015683763607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d78d6ea8c56e7b64fb2308a877d6875b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dontDestroy: 1
+  currentLevel: 0
+  remainingXPForNextLevel: 0
+  playerLevels:
+  - xpForNextLevel: 0
+    isOpenNewCharacter: 0
+  - xpForNextLevel: 80
+    isOpenNewCharacter: 1
+  - xpForNextLevel: 200
+    isOpenNewCharacter: 0
+  - xpForNextLevel: 350
+    isOpenNewCharacter: 1
+  - xpForNextLevel: 550
+    isOpenNewCharacter: 0
+  - xpForNextLevel: 800
+    isOpenNewCharacter: 0
+  - xpForNextLevel: 1100
+    isOpenNewCharacter: 1
+  - xpForNextLevel: 1450
+    isOpenNewCharacter: 0
+  - xpForNextLevel: 1850
+    isOpenNewCharacter: 0
+  - xpForNextLevel: 2300
+    isOpenNewCharacter: 1
+  - xpForNextLevel: 2800
+    isOpenNewCharacter: 0
+  - xpForNextLevel: 3350
+    isOpenNewCharacter: 0
+  - xpForNextLevel: 3950
+    isOpenNewCharacter: 1
+  - xpForNextLevel: 4600
+    isOpenNewCharacter: 0
+  - xpForNextLevel: 5300
+    isOpenNewCharacter: 0
+  - xpForNextLevel: 6050
+    isOpenNewCharacter: 1
+  - xpForNextLevel: 6850
+    isOpenNewCharacter: 0
+  - xpForNextLevel: 7700
+    isOpenNewCharacter: 0
+  - xpForNextLevel: 8600
+    isOpenNewCharacter: 0
+  - xpForNextLevel: 9550
+    isOpenNewCharacter: 0

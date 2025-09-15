@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b207f4c10636904692c40ec2d0fc1ca, type: 3}
+  m_Name: Level 15
+  m_EditorClassIdentifier: 
+  level: 15
+  locationSubtitle: Title
+  locationSprite: {fileID: 21300000, guid: ee7f0659f4a070f4ebe8f5c2311d6314, type: 3}
+  bestTime: 0
+  rewardMoney: 1000
+  rewardXp: 800
+  scene: 3
+  timeBetweenWaves: 10
+  waves:
+  - enemySets:
+    - enemyPrefab: {fileID: 755730952335031424, guid: 7ef2f5877e7001f448b0d40f570ffe45,
+        type: 3}
+      count: 3
+    - enemyPrefab: {fileID: 755730952335031424, guid: 33438ffee8cef384a851b11be6356870,
+        type: 3}
+      count: 5
+    - enemyPrefab: {fileID: 755730952335031424, guid: c3887e6e113ab964b8db9c0780d759fe,
+        type: 3}
+      count: 5
+    - enemyPrefab: {fileID: 755730952335031424, guid: 2ee079986694dd5458e29dfe74b34c6f,
+        type: 3}
+      count: 7
+    maxEnemiesActive: 6
+    spawnRate: 1
+  - enemySets:
+    - enemyPrefab: {fileID: 755730952335031424, guid: 7ef2f5877e7001f448b0d40f570ffe45,
+        type: 3}
+      count: 5
+    - enemyPrefab: {fileID: 755730952335031424, guid: 7596916cf2bed4f4aac83bf19b6b27e7,
+        type: 3}
+      count: 5
+    - enemyPrefab: {fileID: 755730952335031424, guid: fb34b257fdc85254b943b200df2f4671,
+        type: 3}
+      count: 5
+    - enemyPrefab: {fileID: 755730952335031424, guid: 33438ffee8cef384a851b11be6356870,
+        type: 3}
+      count: 4
+    maxEnemiesActive: 5
+    spawnRate: 1
+  - enemySets:
+    - enemyPrefab: {fileID: 755730952335031424, guid: 1637cea5c51dd1947a0eb78ca681732c,
+        type: 3}
+      count: 2
+    - enemyPrefab: {fileID: 755730952335031424, guid: 7ef2f5877e7001f448b0d40f570ffe45,
+        type: 3}
+      count: 5
+    - enemyPrefab: {fileID: 755730952335031424, guid: f31f12748849cab4ebd8ea4d52f22b0a,
+        type: 3}
+      count: 5
+    - enemyPrefab: {fileID: 3254929621148151746, guid: 5592a640529be4c49b613784b152fe0a,
+        type: 3}
+      count: 1
+    maxEnemiesActive: 5
+    spawnRate: 1

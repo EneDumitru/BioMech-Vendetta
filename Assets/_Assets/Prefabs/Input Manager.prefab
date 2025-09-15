@@ -1,0 +1,247 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &665514391252804111
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 949709672282796850}
+  - component: {fileID: 2518612832707002253}
+  - component: {fileID: 698493052898155292}
+  - component: {fileID: 7338339951846769818}
+  - component: {fileID: 6577599505341748140}
+  m_Layer: 0
+  m_Name: Input Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &949709672282796850
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665514391252804111}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2518612832707002253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665514391252804111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c7e5218b26b37140acdc0effbbd9fe9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dontDestroy: 1
+  playerInput: {fileID: 698493052898155292}
+--- !u!114 &698493052898155292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665514391252804111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 9b63c91d288c83a4ebcecb34927d2984,
+    type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6793fb7f-07bb-4a6f-81f8-fd3aea01d4ea
+    m_ActionName: Controller/Movement[/SwitchProControllerHID/leftStick/up,/SwitchProControllerHID/leftStick/down,/SwitchProControllerHID/leftStick/left,/SwitchProControllerHID/leftStick/right,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5e1d6e82-aa74-40d6-a21a-d747bb7718c9
+    m_ActionName: Controller/LookX[/SwitchProControllerHID/rightStick/right,/SwitchProControllerHID/rightStick/left,/Mouse/delta/right,/Mouse/delta/left]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a4512367-0ebb-4863-a42b-dc58b9d96926
+    m_ActionName: Controller/LookY[/SwitchProControllerHID/rightStick/up,/SwitchProControllerHID/rightStick/down,/Mouse/delta/up,/Mouse/delta/down]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ef6f3a5c-c5c3-4596-8da4-8275eac5951d
+    m_ActionName: Controller/Jump[/SwitchProControllerHID/buttonWest,/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d506d34e-6a5a-406e-ab45-964ed7289358
+    m_ActionName: Controller/Crouch[/SwitchProControllerHID/buttonNorth,/Keyboard/ctrl]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c1503095-60ea-406f-9f60-4371c9963395
+    m_ActionName: Controller/Reload[/SwitchProControllerHID/leftShoulder,/Keyboard/r]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 352866b0-9962-4f2c-8ed7-a5edfaded7f9
+    m_ActionName: Controller/Grenade[/SwitchProControllerHID/buttonSouth,/Keyboard/g]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 723daa11-1607-47bc-8d32-4f07a440443b
+    m_ActionName: Controller/Sprint[/SwitchProControllerHID/leftStickPress,/Keyboard/shift]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c3fae000-049a-4667-9094-f1888ce63449
+    m_ActionName: Controller/Roll[/SwitchProControllerHID/buttonEast,/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f99bc639-0f78-4926-b7fe-f729e3515b05
+    m_ActionName: Controller/Aim[/SwitchProControllerHID/leftTrigger,/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f686aebf-cc6b-4277-a906-72fdf0abba3a
+    m_ActionName: Controller/Shoot[/SwitchProControllerHID/rightTrigger,/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e7ca4f44-36ca-40b5-ad12-276ad6f97973
+    m_ActionName: Controller/SwitchWeapon[/Keyboard/tab,/SwitchProControllerHID/dpad/down]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b56ce689-9271-4dcd-a0cf-8eff31ef8a40
+    m_ActionName: UI/Navigate[/SwitchProControllerHID/leftStick/up,/SwitchProControllerHID/rightStick/up,/SwitchProControllerHID/leftStick/down,/SwitchProControllerHID/rightStick/down,/SwitchProControllerHID/leftStick/left,/SwitchProControllerHID/rightStick/left,/SwitchProControllerHID/leftStick/right,/SwitchProControllerHID/rightStick/right,/SwitchProControllerHID/dpad,/ShanWan
+      SVEN/stick/up,/ShanWan SVEN/stick/down,/ShanWan SVEN/stick/left,/ShanWan SVEN/stick/right,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/SwitchProControllerHID/dpad/up,/SwitchProControllerHID/dpad/down,/SwitchProControllerHID/dpad/left,/SwitchProControllerHID/dpad/right]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 66923147-91ca-4c12-8cdf-5460b9b8a819
+    m_ActionName: UI/Submit[/Keyboard/space,/Keyboard/enter,/SwitchProControllerHID/buttonEast]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4add2c5e-f0b8-4c1a-a18d-373cebdd2124
+    m_ActionName: UI/Cancel[/Keyboard/escape,/SwitchProControllerHID/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7b0c2b02-63f3-464e-b4e6-a399ced6b89e
+    m_ActionName: UI/Point[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: dce76436-bda9-4008-84b5-32b3a17b1533
+    m_ActionName: UI/Click[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: cb1ca09d-dcc9-42e2-845f-1eb1eb5b8778
+    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4dfd3f82-6314-4dde-ab47-f3585e11a8d3
+    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0a891fe0-1ee8-4279-a675-a535e2d3d30e
+    m_ActionName: UI/RightClick[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4ffc251f-d7f1-45fd-aa31-a59a3a4c3dd7
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 45248409-83c9-4589-957c-bbe25af7dc5d
+    m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d8b8b9de-b5ea-4aa9-ade2-0d68a69ce547
+    m_ActionName: UI/Menu[/SwitchProControllerHID/start,/Keyboard/escape,/Keyboard/p]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 21e3b70d-5bd5-4437-a9a4-6ea2e917d550
+    m_ActionName: Controller/Pause[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f1083d5b-d0b4-4d05-a6e7-cf861b2342aa
+    m_ActionName: Controller/Scan[/Keyboard/c]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a0b7f459-52e8-402a-9657-7d059d58241a
+    m_ActionName: UI/Next[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c4586df0-014c-4da9-910a-47530a6dd836
+    m_ActionName: UI/Previous[/Keyboard/q]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: UI
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &7338339951846769818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665514391252804111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!114 &6577599505341748140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665514391252804111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: 9b63c91d288c83a4ebcecb34927d2984,
+    type: 3}
+  m_PointAction: {fileID: -5153711146959329044, guid: 9b63c91d288c83a4ebcecb34927d2984,
+    type: 3}
+  m_MoveAction: {fileID: -3025202053705745502, guid: 9b63c91d288c83a4ebcecb34927d2984,
+    type: 3}
+  m_SubmitAction: {fileID: 5610532662043644224, guid: 9b63c91d288c83a4ebcecb34927d2984,
+    type: 3}
+  m_CancelAction: {fileID: 5083472384338177061, guid: 9b63c91d288c83a4ebcecb34927d2984,
+    type: 3}
+  m_LeftClickAction: {fileID: 6503384558678864783, guid: 9b63c91d288c83a4ebcecb34927d2984,
+    type: 3}
+  m_MiddleClickAction: {fileID: -1385425527910023658, guid: 9b63c91d288c83a4ebcecb34927d2984,
+    type: 3}
+  m_RightClickAction: {fileID: 6309917295067193973, guid: 9b63c91d288c83a4ebcecb34927d2984,
+    type: 3}
+  m_ScrollWheelAction: {fileID: -3967185920144480393, guid: 9b63c91d288c83a4ebcecb34927d2984,
+    type: 3}
+  m_TrackedDevicePositionAction: {fileID: 8088193108301037760, guid: 9b63c91d288c83a4ebcecb34927d2984,
+    type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: -6715368766254261477, guid: 9b63c91d288c83a4ebcecb34927d2984,
+    type: 3}
+  m_DeselectOnBackgroundClick: 0
+  m_PointerBehavior: 0
+  m_CursorLockBehavior: 0

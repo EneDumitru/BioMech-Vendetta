@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8f615fb8114b9bbd660c0fc9d35ffb, type: 3}
+  m_Name: SurvivalSkill_4
+  m_EditorClassIdentifier: 
+  TitleLocalizationKey: survival4_title
+  DescriptionLocalizationKey: survival4_description
+  ID: 11
+  Cost: 1
+  UnlockedIcon: {fileID: 21300000, guid: 1427ae4a630478741b71bde97fd3aa28, type: 3}
+  LockedIcon: {fileID: 21300000, guid: 190b604cacaab07498ce4b6fa7d70c17, type: 3}
+  SurvivalType: 2
+  CombatType: 0
+  SupportType: 0
+  Category: 1
+  PreviousRequiredSkill: {fileID: 11400000, guid: a4f457f7cc73f5b4b8d682a60b409df3,
+    type: 2}
+  BonusValue: 2

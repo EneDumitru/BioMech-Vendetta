@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8f615fb8114b9bbd660c0fc9d35ffb, type: 3}
+  m_Name: CombatSkill_4
+  m_EditorClassIdentifier: 
+  TitleLocalizationKey: combat4_title
+  DescriptionLocalizationKey: combat4_description
+  ID: 3
+  Cost: 1
+  UnlockedIcon: {fileID: 21300000, guid: c88822268b0f69a41814e631b457060a, type: 3}
+  LockedIcon: {fileID: 21300000, guid: b5305d98f6151b54b9140723a5af0109, type: 3}
+  SurvivalType: 0
+  CombatType: 4
+  SupportType: 0
+  Category: 0
+  PreviousRequiredSkill: {fileID: 11400000, guid: 89fc2707f1eb3ed48a5128fb84d26f4c,
+    type: 2}
+  BonusValue: 20

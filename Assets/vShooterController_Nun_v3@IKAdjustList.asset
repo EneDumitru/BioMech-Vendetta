@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb2afe458380a5a4aafc1781a445552d, type: 3}
+  m_Name: vShooterController_Nun_v3@IKAdjustList
+  m_EditorClassIdentifier: 
+  ikTargetPositionOffsetR: {x: 0, y: 0, z: 0}
+  ikTargetRotationOffsetR: {x: 0, y: 0, z: 0}
+  ikTargetPositionOffsetL: {x: 0, y: 0, z: 0}
+  ikTargetRotationOffsetL: {x: 0, y: 0, z: 0}
+  weaponIKAdjusts:
+  - {fileID: 11400000, guid: d218a98b708f0ca499c7613d5ebc7067, type: 2}
+  - {fileID: 11400000, guid: b3672bf79f53692419cf74b8d6001fd0, type: 2}
+  - {fileID: 11400000, guid: dd855ce10bb5a8a4ea9391bafd7a6908, type: 2}
+  - {fileID: 11400000, guid: 45a8926cdb223b84f89d1123afcad3ce, type: 2}
+  - {fileID: 11400000, guid: b8165c3d14cf6094b96e317046b9dafb, type: 2}
+  - {fileID: 11400000, guid: 5a4f88c45a9d7844ba33fda377de6b59, type: 2}
+  - {fileID: 11400000, guid: 5049b71ad8d0b044898ab0e1b9e9a173, type: 2}
+  - {fileID: 11400000, guid: b5350cb9a1ed841448c3f89b7b6070eb, type: 2}
+  - {fileID: 11400000, guid: 73456b11fbdbf35419f0b3a7fd5b2237, type: 2}
+  - {fileID: 11400000, guid: c0663c4e4be7fb54bad070689a2c9efd, type: 2}
+  - {fileID: 11400000, guid: c0384e4e225007c4a95ef377acddbad7, type: 2}

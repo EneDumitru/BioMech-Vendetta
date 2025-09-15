@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8f615fb8114b9bbd660c0fc9d35ffb, type: 3}
+  m_Name: SurvivalSkill_5
+  m_EditorClassIdentifier: 
+  TitleLocalizationKey: survival5_title
+  DescriptionLocalizationKey: survival5_description
+  ID: 12
+  Cost: 1
+  UnlockedIcon: {fileID: 21300000, guid: 7da36278f6595b649a5d24dc5ccec6d5, type: 3}
+  LockedIcon: {fileID: 21300000, guid: 2eab1bcab3e25414bbf313f339eac831, type: 3}
+  SurvivalType: 4
+  CombatType: 0
+  SupportType: 0
+  Category: 1
+  PreviousRequiredSkill: {fileID: 11400000, guid: 4a446d121a0e4dc469c496cb8d9bf064,
+    type: 2}
+  BonusValue: 0

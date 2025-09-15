@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8f615fb8114b9bbd660c0fc9d35ffb, type: 3}
+  m_Name: SupportSkill_3
+  m_EditorClassIdentifier: 
+  TitleLocalizationKey: support3_title
+  DescriptionLocalizationKey: support3_description
+  ID: 6
+  Cost: 1
+  UnlockedIcon: {fileID: 21300000, guid: cbe67ce98ec516f46a04ad6e6cc93ff8, type: 3}
+  LockedIcon: {fileID: 21300000, guid: c21321759504ca84e88a7661b118e416, type: 3}
+  SurvivalType: 0
+  CombatType: 0
+  SupportType: 2
+  Category: 2
+  PreviousRequiredSkill: {fileID: 11400000, guid: 0fd05181e2d61024fad7501a6eff89b7,
+    type: 2}
+  BonusValue: 25

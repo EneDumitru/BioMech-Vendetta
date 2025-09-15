@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b207f4c10636904692c40ec2d0fc1ca, type: 3}
+  m_Name: Level 7
+  m_EditorClassIdentifier: 
+  level: 7
+  locationSubtitle: Title
+  locationSprite: {fileID: 21300000, guid: 8ed7f383399cd994490da16213fb2b71, type: 3}
+  bestTime: 0
+  rewardMoney: 600
+  rewardXp: 400
+  scene: 3
+  timeBetweenWaves: 10
+  waves:
+  - enemySets:
+    - enemyPrefab: {fileID: 755730952335031424, guid: 2ee079986694dd5458e29dfe74b34c6f,
+        type: 3}
+      count: 6
+    - enemyPrefab: {fileID: 755730952335031424, guid: 33438ffee8cef384a851b11be6356870,
+        type: 3}
+      count: 3
+    maxEnemiesActive: 4
+    spawnRate: 1
+  - enemySets:
+    - enemyPrefab: {fileID: 755730952335031424, guid: c3887e6e113ab964b8db9c0780d759fe,
+        type: 3}
+      count: 4
+    - enemyPrefab: {fileID: 755730952335031424, guid: 33438ffee8cef384a851b11be6356870,
+        type: 3}
+      count: 3
+    - enemyPrefab: {fileID: 755730952335031424, guid: fb34b257fdc85254b943b200df2f4671,
+        type: 3}
+      count: 4
+    maxEnemiesActive: 4
+    spawnRate: 1
+  - enemySets:
+    - enemyPrefab: {fileID: 755730952335031424, guid: ace78e1ba76df514a9a372f936ef2f90,
+        type: 3}
+      count: 8
+    - enemyPrefab: {fileID: 755730952335031424, guid: c3887e6e113ab964b8db9c0780d759fe,
+        type: 3}
+      count: 4
+    - enemyPrefab: {fileID: 755730952335031424, guid: fb34b257fdc85254b943b200df2f4671,
+        type: 3}
+      count: 2
+    maxEnemiesActive: 6
+    spawnRate: 1

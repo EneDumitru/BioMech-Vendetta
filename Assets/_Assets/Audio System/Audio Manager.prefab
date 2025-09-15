@@ -1,0 +1,166 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &311539517396545432
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 311539517396545434}
+  - component: {fileID: 311539517396545435}
+  m_Layer: 0
+  m_Name: Audio Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &311539517396545434
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311539517396545432}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &311539517396545435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311539517396545432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0190589e1de0c74080ca0d52b9bfda5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dontDestroy: 1
+  themesMenu:
+  - name: 
+    clip: {fileID: 8300000, guid: 0617e14f36da2724cb405799c6934083, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  themesGame:
+  - name: 
+    clip: {fileID: 8300000, guid: f4f40912a046e7d458725fdbae4d6b1f, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 8300000, guid: bcc6e5d2b2eafbb489888bf18f83e1bd, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 8300000, guid: dd730f91ce3fc4940b734c251d47d37d, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 8300000, guid: e41aa361360532245853c218f05004ea, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 8300000, guid: 4073edd2656ee4249a58576935b664ff, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 8300000, guid: 1158f8b467fdd5c4484a46fd66d426c6, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 8300000, guid: b9c87f6496844344e8e117561dafd38a, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 8300000, guid: 62acaeafa3046f24fb2547e268015996, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 8300000, guid: 9b0e1153cdf799e4f8a71001c663d2c9, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 8300000, guid: e88806f2344a70c44befa539daea68ad, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 8300000, guid: 606e735bdc107cd47ae58c6383e67160, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  sounds:
+  - name: Swoosh
+    clip: {fileID: 8300000, guid: 2cef9ad9754105f4797c48d89416ff49, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Tick
+    clip: {fileID: 8300000, guid: f1759730a9a67994dbff0e18571cd65d, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Select
+    clip: {fileID: 8300000, guid: 73e8fc499e2d63c4a843eff3fc13e7ca, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Ambience
+    clip: {fileID: 8300000, guid: 0a4061cd2e87ec14bb9f82b7fadb4f4f, type: 3}
+    volume: 0.7
+    pitch: 1
+    source: {fileID: 0}
+  - name: Ammo
+    clip: {fileID: 8300000, guid: e16fb29deeab7c74eb25d640982a261c, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: HP
+    clip: {fileID: 8300000, guid: 42e670c0a5988ca4a847841cde2a210f, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Buy
+    clip: {fileID: 8300000, guid: 7421a3c6515f1894492e2fdfed9cec04, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Click
+    clip: {fileID: 8300000, guid: 73e8fc499e2d63c4a843eff3fc13e7ca, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Wave
+    clip: {fileID: 8300000, guid: 1e7673cd4c988a24b9dc71f2ed655a04, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Wrong
+    clip: {fileID: 8300000, guid: 0ab75eb42b722cd46ab02300764f8f45, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  audioMixer: {fileID: 24100000, guid: ab19e4e1b275d7f4ba1bd68ab21c8800, type: 2}
+  AudMixMaster: {fileID: 24300002, guid: ab19e4e1b275d7f4ba1bd68ab21c8800, type: 2}
+  AudMixMusic: {fileID: 4212148273455652780, guid: ab19e4e1b275d7f4ba1bd68ab21c8800,
+    type: 2}
+  AudMixSFX: {fileID: -294279101707440107, guid: ab19e4e1b275d7f4ba1bd68ab21c8800,
+    type: 2}

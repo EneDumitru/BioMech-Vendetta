@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b207f4c10636904692c40ec2d0fc1ca, type: 3}
+  m_Name: Level 1
+  m_EditorClassIdentifier: 
+  level: 1
+  locationSubtitle: Title
+  locationSprite: {fileID: 21300000, guid: 980200083578bbf49b641cc47eee7549, type: 3}
+  bestTime: 0
+  rewardMoney: 300
+  rewardXp: 100
+  scene: 3
+  timeBetweenWaves: 10
+  waves:
+  - enemySets:
+    - enemyPrefab: {fileID: 755730952335031424, guid: ace78e1ba76df514a9a372f936ef2f90,
+        type: 3}
+      count: 5
+    maxEnemiesActive: 5
+    spawnRate: 1
+  - enemySets:
+    - enemyPrefab: {fileID: 755730952335031424, guid: ace78e1ba76df514a9a372f936ef2f90,
+        type: 3}
+      count: 10
+    maxEnemiesActive: 6
+    spawnRate: 1

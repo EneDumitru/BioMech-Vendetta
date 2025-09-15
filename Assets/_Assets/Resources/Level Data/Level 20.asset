@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b207f4c10636904692c40ec2d0fc1ca, type: 3}
+  m_Name: Level 20
+  m_EditorClassIdentifier: 
+  level: 20
+  locationSubtitle: Title
+  locationSprite: {fileID: 21300000, guid: 146216335df7ff04db7ed40268290c1b, type: 3}
+  bestTime: 0
+  rewardMoney: 1250
+  rewardXp: 1050
+  scene: 3
+  timeBetweenWaves: 10
+  waves:
+  - enemySets:
+    - enemyPrefab: {fileID: 755730952335031424, guid: c3887e6e113ab964b8db9c0780d759fe,
+        type: 3}
+      count: 6
+    - enemyPrefab: {fileID: 755730952335031424, guid: 7060b5d79d9c9ec4b8992ef2922a28c5,
+        type: 3}
+      count: 1
+    - enemyPrefab: {fileID: 755730952335031424, guid: 33438ffee8cef384a851b11be6356870,
+        type: 3}
+      count: 1
+    maxEnemiesActive: 5
+    spawnRate: 1
+  - enemySets:
+    - enemyPrefab: {fileID: 755730952335031424, guid: fb34b257fdc85254b943b200df2f4671,
+        type: 3}
+      count: 4
+    - enemyPrefab: {fileID: 755730952335031424, guid: cd604f6732bd24440bc8ab02e8a0f4cc,
+        type: 3}
+      count: 4
+    - enemyPrefab: {fileID: 755730952335031424, guid: 5cdbba570439a3947b8bd3dc1971e96d,
+        type: 3}
+      count: 3
+    - enemyPrefab: {fileID: 755730952335031424, guid: 7ef2f5877e7001f448b0d40f570ffe45,
+        type: 3}
+      count: 4
+    maxEnemiesActive: 5
+    spawnRate: 1
+  - enemySets:
+    - enemyPrefab: {fileID: 755730952335031424, guid: a20f082b25e9e394b852684c56c66a2c,
+        type: 3}
+      count: 5
+    - enemyPrefab: {fileID: 755730952335031424, guid: 77c5b4ce96d9cad41a1f75cd897ac34a,
+        type: 3}
+      count: 1
+    - enemyPrefab: {fileID: 755730952335031424, guid: f31f12748849cab4ebd8ea4d52f22b0a,
+        type: 3}
+      count: 5
+    - enemyPrefab: {fileID: 755730952335031424, guid: cfe08c48d61d03b41bfc870d19a64565,
+        type: 3}
+      count: 3
+    maxEnemiesActive: 6
+    spawnRate: 1
