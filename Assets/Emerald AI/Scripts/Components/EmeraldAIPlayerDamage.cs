@@ -16,7 +16,7 @@ namespace EmeraldAI
 
         public void SendPlayerDamage(int DamageAmount, Transform Target, EmeraldAISystem EmeraldComponent, bool CriticalHit = false)
         {
-            
+            Debug.LogError("TAKEDAMAGEPD");
             //The standard damage function that sends damage to the Emerald AI demo player
             DamagePlayerStandard(DamageAmount);
 

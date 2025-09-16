@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using EmeraldAI;
+using Invector;
 
 namespace EmeraldAI
 {
@@ -15,8 +16,11 @@ namespace EmeraldAI
         int StartingLayer;
         int StartingHealth;
 
+        private EmeraldAISystem _emerald;
+
         private void Start()
         {
+            _emerald = GetComponent<EmeraldAISystem>();
             StartingLayer = gameObject.layer;
             StartingTag = gameObject.tag;
             StartingHealth = Health;
@@ -27,15 +31,22 @@ namespace EmeraldAI
         /// </summary>
         public void SendNonAIDamage(int DamageAmount, Transform Target, bool CriticalHit = false)
         {
-            DefaultDamage(DamageAmount, Target);
+            //DefaultDamage(DamageAmount, Target);
+            if (_emerald != null)
+            {
+                _emerald.Damage(DamageAmount, EmeraldAISystem.TargetType.Player);
+            }
 
             //Creates damage text on the player's position, if enabled.
-            CombatTextSystem.Instance.CreateCombatText(DamageAmount, transform.position + new Vector3(0, transform.localScale.y / 2, 0), CriticalHit, false, false);
+            //CombatTextSystem.Instance.CreateCombatText(DamageAmount, transform.position + new Vector3(0, transform.localScale.y / 2, 0), CriticalHit, false, false);
         }
 
         void DefaultDamage(int DamageAmount, Transform Target)
         {
+            Debug.LogError(DamageAmount);
             Health -= DamageAmount;
+            
+            Debug.LogError(Health);
 
             if (Health <= 0)
             {

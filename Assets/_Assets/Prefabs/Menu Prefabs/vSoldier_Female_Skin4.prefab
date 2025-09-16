@@ -3064,7 +3064,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.85, y: 0.85, z: 0.85}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1257781956666180134}
@@ -3314,8 +3314,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6629ea84fc793964da337692997cdd5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avatarMenu: {fileID: 9000000, guid: ff88f4e0dcd61c24d999f9eff2ca5db1, type: 2}
-  avatarCustomize: {fileID: 9000000, guid: 8cbdf5d09d112114a917112458b55470, type: 3}
+  avatarMenu: {fileID: 9000000, guid: a0f08ca0d3c7d8d43948478bae317f1f, type: 3}
+  avatarCustomize: {fileID: 9000000, guid: a0f08ca0d3c7d8d43948478bae317f1f, type: 3}
 --- !u!114 &6649534020972527167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3323,7 +3323,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7468000786049138894}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16491f0d901543c2ae1f0ae0478f5051, type: 3}
   m_Name: 

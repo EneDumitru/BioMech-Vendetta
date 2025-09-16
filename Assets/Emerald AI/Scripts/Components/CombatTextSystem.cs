@@ -11,15 +11,20 @@ namespace EmeraldAI
     public class CombatTextSystem : MonoBehaviour
     {
         public static CombatTextSystem Instance;
-        [HideInInspector]
-        public GameObject CombatTextObject;
-        public enum AnimationTypeEnum { Bounce, Upwards, OutwardsV1, OutwardsV2, Stationary };
-        [HideInInspector]
-        public AnimationTypeEnum AnimationType = AnimationTypeEnum.Bounce;
-        [HideInInspector]
-        public GameObject CombatTextCanvas;
-        [HideInInspector]
-        public EmeraldAICombatTextData m_EmeraldAICombatTextData;
+        [HideInInspector] public GameObject CombatTextObject;
+
+        public enum AnimationTypeEnum
+        {
+            Bounce,
+            Upwards,
+            OutwardsV1,
+            OutwardsV2,
+            Stationary
+        };
+
+        [HideInInspector] public AnimationTypeEnum AnimationType = AnimationTypeEnum.Bounce;
+        [HideInInspector] public GameObject CombatTextCanvas;
+        [HideInInspector] public EmeraldAICombatTextData m_EmeraldAICombatTextData;
         Transform m_CombatTextParent;
 
         private vHealthController _playerHealthController;
@@ -33,7 +38,8 @@ namespace EmeraldAI
         {
             CombatTextObject = (GameObject)Resources.Load("Combat Text") as GameObject;
             m_CombatTextParent = CombatTextCanvas.transform.GetChild(0);
-            m_EmeraldAICombatTextData = (EmeraldAICombatTextData)Resources.Load("Combat Text Data") as EmeraldAICombatTextData;
+            m_EmeraldAICombatTextData =
+                (EmeraldAICombatTextData)Resources.Load("Combat Text Data") as EmeraldAICombatTextData;
         }
 
         private void Start()
@@ -41,17 +47,21 @@ namespace EmeraldAI
             _playerHealthController = GameManager.Instance.playerInstance.GetComponent<vHealthController>();
         }
 
-        public void CreateCombatText(int amount, Vector3 TextPosition, bool CriticalHit, bool HealingText, bool PlayerTakingDamage)
+        public void CreateCombatText(int amount, Vector3 TextPosition, bool CriticalHit, bool HealingText,
+            bool PlayerTakingDamage)
         {
+            Debug.LogError("TAKEDAMAGE");
             if (m_EmeraldAICombatTextData.CombatTextState == EmeraldAICombatTextData.CombatTextStateEnum.Enabled)
             {
-                if (m_EmeraldAICombatTextData.CombatTextTargets == EmeraldAICombatTextData.CombatTextTargetEnum.AIOnly && PlayerTakingDamage)
+                if (m_EmeraldAICombatTextData.CombatTextTargets ==
+                    EmeraldAICombatTextData.CombatTextTargetEnum.AIOnly && PlayerTakingDamage)
                 {
                     return;
                 }
 
                 AnimationType = (AnimationTypeEnum)m_EmeraldAICombatTextData.AnimationType;
-                var t = EmeraldAI.Utility.EmeraldAIObjectPool.Spawn(CombatTextObject, TextPosition + Vector3.up, Quaternion.identity);
+                var t = EmeraldAI.Utility.EmeraldAIObjectPool.Spawn(CombatTextObject, TextPosition + Vector3.up,
+                    Quaternion.identity);
                 t.transform.SetParent(m_CombatTextParent);
                 t.transform.position = Vector3.zero;
 
@@ -72,38 +82,47 @@ namespace EmeraldAI
 
                 if (AnimationType == AnimationTypeEnum.Bounce)
                 {
-                    StartCoroutine(AnimateBounceText(m_Text, m_EmeraldAICombatTextData.PlayerTextColor, m_EmeraldAICombatTextData.PlayerCritTextColor,TextPosition, CriticalHit, HealingText, PlayerTakingDamage));
+                    StartCoroutine(AnimateBounceText(m_Text, m_EmeraldAICombatTextData.PlayerTextColor,
+                        m_EmeraldAICombatTextData.PlayerCritTextColor, TextPosition, CriticalHit, HealingText,
+                        PlayerTakingDamage));
                 }
                 else if (AnimationType == AnimationTypeEnum.Upwards)
                 {
-                    StartCoroutine(AnimateUpwardsText(m_Text, m_EmeraldAICombatTextData.PlayerTextColor, m_EmeraldAICombatTextData.PlayerCritTextColor, TextPosition, CriticalHit, HealingText, PlayerTakingDamage));
+                    StartCoroutine(AnimateUpwardsText(m_Text, m_EmeraldAICombatTextData.PlayerTextColor,
+                        m_EmeraldAICombatTextData.PlayerCritTextColor, TextPosition, CriticalHit, HealingText,
+                        PlayerTakingDamage));
                 }
                 else if (AnimationType == AnimationTypeEnum.OutwardsV1 || AnimationType == AnimationTypeEnum.OutwardsV2)
                 {
-                    StartCoroutine(AnimateOutwardsText(m_Text, m_EmeraldAICombatTextData.PlayerTextColor, m_EmeraldAICombatTextData.PlayerCritTextColor, TextPosition, CriticalHit, HealingText, PlayerTakingDamage));
+                    StartCoroutine(AnimateOutwardsText(m_Text, m_EmeraldAICombatTextData.PlayerTextColor,
+                        m_EmeraldAICombatTextData.PlayerCritTextColor, TextPosition, CriticalHit, HealingText,
+                        PlayerTakingDamage));
                 }
                 else if (AnimationType == AnimationTypeEnum.Stationary)
                 {
-                    StartCoroutine(AnimateStationaryText(m_Text, m_EmeraldAICombatTextData.PlayerTextColor, m_EmeraldAICombatTextData.PlayerCritTextColor, TextPosition, CriticalHit, HealingText, PlayerTakingDamage));
+                    StartCoroutine(AnimateStationaryText(m_Text, m_EmeraldAICombatTextData.PlayerTextColor,
+                        m_EmeraldAICombatTextData.PlayerCritTextColor, TextPosition, CriticalHit, HealingText,
+                        PlayerTakingDamage));
                 }
             }
         }
 
         private void VampirismText(int Amount, Vector3 TextPosition)
         {
-             if (m_EmeraldAICombatTextData.CombatTextState == EmeraldAICombatTextData.CombatTextStateEnum.Enabled)
+            if (m_EmeraldAICombatTextData.CombatTextState == EmeraldAICombatTextData.CombatTextStateEnum.Enabled)
             {
                 AnimationType = (AnimationTypeEnum)m_EmeraldAICombatTextData.AnimationType;
-                var t = EmeraldAI.Utility.EmeraldAIObjectPool.Spawn(CombatTextObject, TextPosition + Vector3.up, Quaternion.identity);
+                var t = EmeraldAI.Utility.EmeraldAIObjectPool.Spawn(CombatTextObject, TextPosition + Vector3.up,
+                    Quaternion.identity);
                 t.transform.SetParent(m_CombatTextParent);
                 t.transform.position = Vector3.zero;
 
-                Text m_Text = t.GetComponent<Text>();                
+                Text m_Text = t.GetComponent<Text>();
                 m_Text.text = Amount.ToString();
                 m_Text.font = m_EmeraldAICombatTextData.TextFont;
                 m_Text.fontSize = m_EmeraldAICombatTextData.FontSize;
 
-                Outline m_OutLine = t.GetComponent<Outline>();                
+                Outline m_OutLine = t.GetComponent<Outline>();
                 if (m_EmeraldAICombatTextData.OutlineEffect == EmeraldAICombatTextData.OutlineEffectEnum.Enabled)
                 {
                     m_OutLine.enabled = true;
@@ -115,23 +134,27 @@ namespace EmeraldAI
 
                 if (AnimationType == AnimationTypeEnum.Bounce)
                 {
-                    StartCoroutine(AnimateBounceText(m_Text, m_EmeraldAICombatTextData.AITextColor, m_EmeraldAICombatTextData.AICritTextColor, TextPosition, false, true, false));
+                    StartCoroutine(AnimateBounceText(m_Text, m_EmeraldAICombatTextData.AITextColor,
+                        m_EmeraldAICombatTextData.AICritTextColor, TextPosition, false, true, false));
                 }
                 else if (AnimationType == AnimationTypeEnum.Upwards)
                 {
-                    StartCoroutine(AnimateUpwardsText(m_Text, m_EmeraldAICombatTextData.AITextColor, m_EmeraldAICombatTextData.AICritTextColor, TextPosition, false, true, false));
+                    StartCoroutine(AnimateUpwardsText(m_Text, m_EmeraldAICombatTextData.AITextColor,
+                        m_EmeraldAICombatTextData.AICritTextColor, TextPosition, false, true, false));
                 }
                 else if (AnimationType == AnimationTypeEnum.OutwardsV1 || AnimationType == AnimationTypeEnum.OutwardsV2)
                 {
-                    StartCoroutine(AnimateOutwardsText(m_Text, m_EmeraldAICombatTextData.AITextColor, m_EmeraldAICombatTextData.AICritTextColor, TextPosition, false, true, false));
+                    StartCoroutine(AnimateOutwardsText(m_Text, m_EmeraldAICombatTextData.AITextColor,
+                        m_EmeraldAICombatTextData.AICritTextColor, TextPosition, false, true, false));
                 }
                 else if (AnimationType == AnimationTypeEnum.Stationary)
                 {
-                    StartCoroutine(AnimateStationaryText(m_Text, m_EmeraldAICombatTextData.AITextColor, m_EmeraldAICombatTextData.AICritTextColor, TextPosition, false, true, false));
+                    StartCoroutine(AnimateStationaryText(m_Text, m_EmeraldAICombatTextData.AITextColor,
+                        m_EmeraldAICombatTextData.AICritTextColor, TextPosition, false, true, false));
                 }
             }
         }
-        
+
         public void CreateCombatTextAI(int Amount, Vector3 TextPosition, bool CriticalHit, bool HealingText)
         {
             if (_playerHealthController.vampirismActive)
@@ -139,24 +162,25 @@ namespace EmeraldAI
                 var vampValue = Amount * _playerHealthController.vampirismPercent / 100;
                 if (vampValue < 1)
                     vampValue = 1;
-                
+
                 _playerHealthController.AddHealth((int)vampValue);
                 VampirismText((int)vampValue, TextPosition);
             }
-            
+
             if (m_EmeraldAICombatTextData.CombatTextState == EmeraldAICombatTextData.CombatTextStateEnum.Enabled)
             {
                 AnimationType = (AnimationTypeEnum)m_EmeraldAICombatTextData.AnimationType;
-                var t = EmeraldAI.Utility.EmeraldAIObjectPool.Spawn(CombatTextObject, TextPosition + Vector3.up, Quaternion.identity);
+                var t = EmeraldAI.Utility.EmeraldAIObjectPool.Spawn(CombatTextObject, TextPosition + Vector3.up,
+                    Quaternion.identity);
                 t.transform.SetParent(m_CombatTextParent);
                 t.transform.position = Vector3.zero;
 
-                Text m_Text = t.GetComponent<Text>();                
+                Text m_Text = t.GetComponent<Text>();
                 m_Text.text = Amount.ToString();
                 m_Text.font = m_EmeraldAICombatTextData.TextFont;
                 m_Text.fontSize = m_EmeraldAICombatTextData.FontSize;
 
-                Outline m_OutLine = t.GetComponent<Outline>();                
+                Outline m_OutLine = t.GetComponent<Outline>();
                 if (m_EmeraldAICombatTextData.OutlineEffect == EmeraldAICombatTextData.OutlineEffectEnum.Enabled)
                 {
                     m_OutLine.enabled = true;
@@ -168,24 +192,29 @@ namespace EmeraldAI
 
                 if (AnimationType == AnimationTypeEnum.Bounce)
                 {
-                    StartCoroutine(AnimateBounceText(m_Text, m_EmeraldAICombatTextData.AITextColor, m_EmeraldAICombatTextData.AICritTextColor, TextPosition, CriticalHit, HealingText, false));
+                    StartCoroutine(AnimateBounceText(m_Text, m_EmeraldAICombatTextData.AITextColor,
+                        m_EmeraldAICombatTextData.AICritTextColor, TextPosition, CriticalHit, HealingText, false));
                 }
                 else if (AnimationType == AnimationTypeEnum.Upwards)
                 {
-                    StartCoroutine(AnimateUpwardsText(m_Text, m_EmeraldAICombatTextData.AITextColor, m_EmeraldAICombatTextData.AICritTextColor, TextPosition, CriticalHit, HealingText, false));
+                    StartCoroutine(AnimateUpwardsText(m_Text, m_EmeraldAICombatTextData.AITextColor,
+                        m_EmeraldAICombatTextData.AICritTextColor, TextPosition, CriticalHit, HealingText, false));
                 }
                 else if (AnimationType == AnimationTypeEnum.OutwardsV1 || AnimationType == AnimationTypeEnum.OutwardsV2)
                 {
-                    StartCoroutine(AnimateOutwardsText(m_Text, m_EmeraldAICombatTextData.AITextColor, m_EmeraldAICombatTextData.AICritTextColor, TextPosition, CriticalHit, HealingText, false));
+                    StartCoroutine(AnimateOutwardsText(m_Text, m_EmeraldAICombatTextData.AITextColor,
+                        m_EmeraldAICombatTextData.AICritTextColor, TextPosition, CriticalHit, HealingText, false));
                 }
                 else if (AnimationType == AnimationTypeEnum.Stationary)
                 {
-                    StartCoroutine(AnimateStationaryText(m_Text, m_EmeraldAICombatTextData.AITextColor, m_EmeraldAICombatTextData.AICritTextColor, TextPosition, CriticalHit, HealingText, false));
+                    StartCoroutine(AnimateStationaryText(m_Text, m_EmeraldAICombatTextData.AITextColor,
+                        m_EmeraldAICombatTextData.AICritTextColor, TextPosition, CriticalHit, HealingText, false));
                 }
             }
         }
 
-        IEnumerator AnimateBounceText(Text m_Text, Color RegularTextColor, Color CritTextColor, Vector3 TargetPosition, bool CriticalHit, bool HealingText, bool PlayerTakingDamage)
+        IEnumerator AnimateBounceText(Text m_Text, Color RegularTextColor, Color CritTextColor, Vector3 TargetPosition,
+            bool CriticalHit, bool HealingText, bool PlayerTakingDamage)
         {
             if (CriticalHit)
             {
@@ -225,20 +254,27 @@ namespace EmeraldAI
                 t += Time.deltaTime;
                 float r = 1.0f - (t / 1);
                 Vector3 m_TextPos = TargetPosition + new Vector3(r - RandomXPosition, Mathf.Sin(r * Mathf.PI), 0);
-                m_TextPos = Camera.main.WorldToScreenPoint(m_TextPos - Vector3.right + Vector3.up * m_EmeraldAICombatTextData.DefaultHeight / 2);
+                m_TextPos = Camera.main.WorldToScreenPoint(m_TextPos - Vector3.right +
+                                                           Vector3.up * m_EmeraldAICombatTextData.DefaultHeight / 2);
                 m_TextPos.z = 0.0f;
 
-                if (m_EmeraldAICombatTextData.UseAnimateFontSize == EmeraldAICombatTextData.UseAnimateFontSizeEnum.Enabled)
+                if (m_EmeraldAICombatTextData.UseAnimateFontSize ==
+                    EmeraldAICombatTextData.UseAnimateFontSizeEnum.Enabled)
                 {
                     if (t <= 0.15f)
                     {
                         AnimateLarger += Time.deltaTime * 8;
-                        m_Text.fontSize = (int)Mathf.Lerp((float)m_EmeraldAICombatTextData.FontSize, (float)m_EmeraldAICombatTextData.FontSize + m_EmeraldAICombatTextData.MaxFontSize, AnimateLarger);
+                        m_Text.fontSize = (int)Mathf.Lerp((float)m_EmeraldAICombatTextData.FontSize,
+                            (float)m_EmeraldAICombatTextData.FontSize + m_EmeraldAICombatTextData.MaxFontSize,
+                            AnimateLarger);
                     }
                     else if (t > 0.15f && t <= 0.3f)
                     {
                         AnimateSmaller += Time.deltaTime * 6;
-                        m_Text.fontSize = (int)Mathf.Lerp((float)m_EmeraldAICombatTextData.FontSize + m_EmeraldAICombatTextData.MaxFontSize, (float)m_EmeraldAICombatTextData.FontSize, AnimateSmaller);
+                        m_Text.fontSize =
+                            (int)Mathf.Lerp(
+                                (float)m_EmeraldAICombatTextData.FontSize + m_EmeraldAICombatTextData.MaxFontSize,
+                                (float)m_EmeraldAICombatTextData.FontSize, AnimateSmaller);
                     }
                 }
 
@@ -256,7 +292,8 @@ namespace EmeraldAI
             EmeraldAI.Utility.EmeraldAIObjectPool.Despawn(m_Text.gameObject);
         }
 
-        IEnumerator AnimateUpwardsText(Text m_Text, Color RegularTextColor, Color CritTextColor, Vector3 TargetPosition, bool CriticalHit, bool HealingText, bool PlayerTakingDamage)
+        IEnumerator AnimateUpwardsText(Text m_Text, Color RegularTextColor, Color CritTextColor, Vector3 TargetPosition,
+            bool CriticalHit, bool HealingText, bool PlayerTakingDamage)
         {
             if (CriticalHit)
             {
@@ -293,23 +330,31 @@ namespace EmeraldAI
 
             while ((t / 1.5f) < 1)
             {
-                t += Time.deltaTime*0.75f;
+                t += Time.deltaTime * 0.75f;
                 float r = 1.0f - (t / 1);
-                Vector3 m_TextPos = TargetPosition + new Vector3(RandomXPosition, -r * m_EmeraldAICombatTextData.DefaultHeight, 0);
-                m_TextPos = Camera.main.WorldToScreenPoint(m_TextPos + Vector3.up * m_EmeraldAICombatTextData.DefaultHeight);
+                Vector3 m_TextPos = TargetPosition +
+                                    new Vector3(RandomXPosition, -r * m_EmeraldAICombatTextData.DefaultHeight, 0);
+                m_TextPos = Camera.main.WorldToScreenPoint(m_TextPos +
+                                                           Vector3.up * m_EmeraldAICombatTextData.DefaultHeight);
                 m_TextPos.z = 0.0f;
 
-                if (m_EmeraldAICombatTextData.UseAnimateFontSize == EmeraldAICombatTextData.UseAnimateFontSizeEnum.Enabled)
+                if (m_EmeraldAICombatTextData.UseAnimateFontSize ==
+                    EmeraldAICombatTextData.UseAnimateFontSizeEnum.Enabled)
                 {
                     if (t <= 0.15f)
                     {
                         AnimateLarger += Time.deltaTime * 8;
-                        m_Text.fontSize = (int)Mathf.Lerp((float)m_EmeraldAICombatTextData.FontSize, (float)m_EmeraldAICombatTextData.FontSize + m_EmeraldAICombatTextData.MaxFontSize, AnimateLarger);
+                        m_Text.fontSize = (int)Mathf.Lerp((float)m_EmeraldAICombatTextData.FontSize,
+                            (float)m_EmeraldAICombatTextData.FontSize + m_EmeraldAICombatTextData.MaxFontSize,
+                            AnimateLarger);
                     }
                     else if (t > 0.15f && t <= 0.3f)
                     {
                         AnimateSmaller += Time.deltaTime * 6;
-                        m_Text.fontSize = (int)Mathf.Lerp((float)m_EmeraldAICombatTextData.FontSize + m_EmeraldAICombatTextData.MaxFontSize, (float)m_EmeraldAICombatTextData.FontSize, AnimateSmaller);
+                        m_Text.fontSize =
+                            (int)Mathf.Lerp(
+                                (float)m_EmeraldAICombatTextData.FontSize + m_EmeraldAICombatTextData.MaxFontSize,
+                                (float)m_EmeraldAICombatTextData.FontSize, AnimateSmaller);
                     }
                 }
 
@@ -327,7 +372,8 @@ namespace EmeraldAI
             EmeraldAI.Utility.EmeraldAIObjectPool.Despawn(m_Text.gameObject);
         }
 
-        IEnumerator AnimateOutwardsText(Text m_Text, Color RegularTextColor, Color CritTextColor, Vector3 TargetPosition, bool CriticalHit, bool HealingText, bool PlayerTakingDamage)
+        IEnumerator AnimateOutwardsText(Text m_Text, Color RegularTextColor, Color CritTextColor,
+            Vector3 TargetPosition, bool CriticalHit, bool HealingText, bool PlayerTakingDamage)
         {
             if (CriticalHit)
             {
@@ -368,37 +414,45 @@ namespace EmeraldAI
 
             while ((t / 1) < 1)
             {
-                t += Time.deltaTime/2;
+                t += Time.deltaTime / 2;
 
                 if (r > 0.5f)
                 {
-                    r = 1.0f - (t*4 / 1);
+                    r = 1.0f - (t * 4 / 1);
                 }
 
                 if (AnimationType == AnimationTypeEnum.OutwardsV1)
                 {
-                    m_TextPos = TargetPosition + new Vector3(Mathf.Lerp(0, RandomXPosition, t), -r * m_EmeraldAICombatTextData.DefaultHeight + Mathf.Sin(t * Mathf.PI), 0);
+                    m_TextPos = TargetPosition + new Vector3(Mathf.Lerp(0, RandomXPosition, t),
+                        -r * m_EmeraldAICombatTextData.DefaultHeight + Mathf.Sin(t * Mathf.PI), 0);
                 }
                 else if (AnimationType == AnimationTypeEnum.OutwardsV2)
                 {
-                    m_TextPos = TargetPosition + new Vector3(Mathf.Lerp(0, RandomXPosition, 1 - r), -r * m_EmeraldAICombatTextData.DefaultHeight + Mathf.Sin(r + RandomYPosition * Mathf.PI), 0);
+                    m_TextPos = TargetPosition + new Vector3(Mathf.Lerp(0, RandomXPosition, 1 - r),
+                        -r * m_EmeraldAICombatTextData.DefaultHeight + Mathf.Sin(r + RandomYPosition * Mathf.PI), 0);
                 }
 
-                m_TextPos = Camera.main.WorldToScreenPoint(m_TextPos+Vector3.up*RandomYPosition);
+                m_TextPos = Camera.main.WorldToScreenPoint(m_TextPos + Vector3.up * RandomYPosition);
                 m_TextPos.z = 0.0f;
                 m_Text.transform.position = m_TextPos;
 
-                if (m_EmeraldAICombatTextData.UseAnimateFontSize == EmeraldAICombatTextData.UseAnimateFontSizeEnum.Enabled)
+                if (m_EmeraldAICombatTextData.UseAnimateFontSize ==
+                    EmeraldAICombatTextData.UseAnimateFontSizeEnum.Enabled)
                 {
                     if (t <= 0.15f)
                     {
                         AnimateLarger += Time.deltaTime * 8;
-                        m_Text.fontSize = (int)Mathf.Lerp((float)m_EmeraldAICombatTextData.FontSize, (float)m_EmeraldAICombatTextData.FontSize + m_EmeraldAICombatTextData.MaxFontSize, AnimateLarger);
+                        m_Text.fontSize = (int)Mathf.Lerp((float)m_EmeraldAICombatTextData.FontSize,
+                            (float)m_EmeraldAICombatTextData.FontSize + m_EmeraldAICombatTextData.MaxFontSize,
+                            AnimateLarger);
                     }
                     else if (t > 0.15f && t <= 0.3f)
                     {
                         AnimateSmaller += Time.deltaTime * 6;
-                        m_Text.fontSize = (int)Mathf.Lerp((float)m_EmeraldAICombatTextData.FontSize + m_EmeraldAICombatTextData.MaxFontSize, (float)m_EmeraldAICombatTextData.FontSize, AnimateSmaller);
+                        m_Text.fontSize =
+                            (int)Mathf.Lerp(
+                                (float)m_EmeraldAICombatTextData.FontSize + m_EmeraldAICombatTextData.MaxFontSize,
+                                (float)m_EmeraldAICombatTextData.FontSize, AnimateSmaller);
                     }
                 }
 
@@ -414,7 +468,8 @@ namespace EmeraldAI
             EmeraldAI.Utility.EmeraldAIObjectPool.Despawn(m_Text.gameObject);
         }
 
-        IEnumerator AnimateStationaryText(Text m_Text, Color RegularTextColor, Color CritTextColor, Vector3 TargetPosition, bool CriticalHit, bool HealingText, bool PlayerTakingDamage)
+        IEnumerator AnimateStationaryText(Text m_Text, Color RegularTextColor, Color CritTextColor,
+            Vector3 TargetPosition, bool CriticalHit, bool HealingText, bool PlayerTakingDamage)
         {
             if (CriticalHit)
             {
@@ -458,17 +513,23 @@ namespace EmeraldAI
                 m_TextPos = Camera.main.WorldToScreenPoint(m_TextPos - Vector3.up * 0.5f);
                 m_TextPos.z = 0.0f;
 
-                if (m_EmeraldAICombatTextData.UseAnimateFontSize == EmeraldAICombatTextData.UseAnimateFontSizeEnum.Enabled)
+                if (m_EmeraldAICombatTextData.UseAnimateFontSize ==
+                    EmeraldAICombatTextData.UseAnimateFontSizeEnum.Enabled)
                 {
                     if (t <= 0.15f)
                     {
                         AnimateLarger += Time.deltaTime * 8;
-                        m_Text.fontSize = (int)Mathf.Lerp((float)m_EmeraldAICombatTextData.FontSize, (float)m_EmeraldAICombatTextData.FontSize + m_EmeraldAICombatTextData.MaxFontSize, AnimateLarger);
+                        m_Text.fontSize = (int)Mathf.Lerp((float)m_EmeraldAICombatTextData.FontSize,
+                            (float)m_EmeraldAICombatTextData.FontSize + m_EmeraldAICombatTextData.MaxFontSize,
+                            AnimateLarger);
                     }
                     else if (t > 0.15f && t <= 0.3f)
                     {
                         AnimateSmaller += Time.deltaTime * 6;
-                        m_Text.fontSize = (int)Mathf.Lerp((float)m_EmeraldAICombatTextData.FontSize + m_EmeraldAICombatTextData.MaxFontSize, (float)m_EmeraldAICombatTextData.FontSize, AnimateSmaller);
+                        m_Text.fontSize =
+                            (int)Mathf.Lerp(
+                                (float)m_EmeraldAICombatTextData.FontSize + m_EmeraldAICombatTextData.MaxFontSize,
+                                (float)m_EmeraldAICombatTextData.FontSize, AnimateSmaller);
                     }
                 }
 

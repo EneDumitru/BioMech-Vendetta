@@ -55,7 +55,7 @@ public class CustomizePanel : Panel
 
     private void OnEnable()
     {
-        CameraManager.OnChangeCameraMode?.Invoke(CameraMode.Customize);
+        //CameraManager.OnChangeCameraMode?.Invoke(CameraMode.Customize);
         UpdateUI();
         CustomizeManager.OnCharacterSpawn += UpdateUI;
         OnSelectUpdate = SelectUpdate;
@@ -64,8 +64,8 @@ public class CustomizePanel : Panel
         {
             SetActions();
             CustomizeManager.Instance.SetCustomizeRotation(true);
-            CustomizeManager.Instance.currentCharacter.GetComponent<Animator>().SetTrigger("StandUp");
-            CustomizeManager.Instance.currentCharacter.GetComponent<IdleRandomizer>().ChangeState(true);
+            //CustomizeManager.Instance.currentCharacter.GetComponent<Animator>().SetTrigger("StandUp");
+            //CustomizeManager.Instance.currentCharacter.GetComponent<IdleRandomizer>().ChangeState(true);
         }
     }
 
@@ -76,8 +76,8 @@ public class CustomizePanel : Panel
         OnSelectUpdate = null;
         RemoveActions();
         CustomizeManager.Instance.SetCustomizeRotation(false);
-        CustomizeManager.Instance.currentCharacter.GetComponent<IdleRandomizer>().ChangeState(false);
-        CustomizeManager.Instance.currentCharacter.GetComponent<Animator>().SetTrigger("SitDown");
+        //CustomizeManager.Instance.currentCharacter.GetComponent<IdleRandomizer>().ChangeState(false);
+        //CustomizeManager.Instance.currentCharacter.GetComponent<Animator>().SetTrigger("SitDown");
     }
 
 
@@ -93,8 +93,8 @@ public class CustomizePanel : Panel
 
         SetActions();
         CustomizeManager.Instance.SetCustomizeRotation(true);
-        CustomizeManager.Instance.currentCharacter.GetComponent<Animator>().SetTrigger("StandUp");
-        CustomizeManager.Instance.currentCharacter.GetComponent<IdleRandomizer>().ChangeState(true);
+        //CustomizeManager.Instance.currentCharacter.GetComponent<Animator>().SetTrigger("StandUp");
+        //CustomizeManager.Instance.currentCharacter.GetComponent<IdleRandomizer>().ChangeState(true);
     }
 
     private void SetActions()
@@ -216,7 +216,7 @@ public class CustomizePanel : Panel
         }
 
         UpdateSkinSlot(chosingCharacterIndex);
-        CustomizeManager.Instance.currentCharacter.GetComponent<IdleRandomizer>().ChangeState(true);
+        //CustomizeManager.Instance.currentCharacter.GetComponent<IdleRandomizer>().ChangeState(true);
     }
 
     private void UpdateSkinSlot(int charID)
