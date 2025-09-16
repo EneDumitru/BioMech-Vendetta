@@ -1,0 +1,57 @@
+---How to swap to URP or HDRP Render Pipelines---
+
+1.) Install your Render Pipeline if you have not already.
+
+2.) Switch to your Render Pipeline in the Project Settings.
+2.a) If using Basic, ensure that your color space is Linear
+https://docs.unity3d.com/Manual/LinearRendering-LinearOrGammaWorkflow.html
+
+3.) Inside the "AlienPlantsVol3" folder, I want you to delete all folders except for the "Textures" folder
+So delete these folders:
+- Materials
+- Meshes
+- Prefabs
+- Scenes
+- Scripts
+- Shaders
+- Sound
+
+4.) If you want to use BasicRP, also ensure that the "StreamingAssets folder" has these contents deleted:
+- FoliageData_AlienPlants_Vol3_A_Level
+- FoliageData_Demonstration_B
+
+5.) Inside the "AlienPlantsVol3" folder, you'll find two packages.
+Extract your chosen Render Pipeline Package
+(Choose from the following)
+- BasicRP_Patch
+- URP_Patch
+
+6.) Now you can open your levels! Locate them in:
+Assets/Davis3D/AlienPlantsVol3/Scenes
+
+
+----------
+
+ ______ _____  _____   ____  _____   _____ ___  
+ |  ____|  __ \|  __ \ / __ \|  __ \ / ____|__ \ 
+ | |__  | |__) | |__) | |  | | |__) | (___    ) |
+ |  __| |  _  /|  _  /| |  | |  _  / \___ \  / / 
+ | |____| | \ \| | \ \| |__| | | \ \ ____) ||_|  
+ |______|_|  \_\_|  \_\\____/|_|  \_\_____/ (_)
+
+If you encounter any errors, please check the following:
+
+1.) There should be a folder called "StreamingAssets" inside your Unity project's "Assets" folder.
+If you cannot see one there, please go to the following web address and download it:
+https://drive.google.com/drive/folders/1lrkNYW1OpPqlRb14ZgfjKzFP8tF7G0qg?usp=sharing
+
+2.) If you encounter shader errors, please contact me at 
+justin@davis3d.com
+
+Most of the time, when new engine versions come out, Amplify Shader editor will need to be redownloaded, reinstalled, and all the shaders recompiled.
+I will do my best to keep track of this, but sometimes i may miss an update.
+I will also provide these shaders in this location while Unity Administrators take time to update the asset on the product page:
+https://drive.google.com/drive/folders/1lrkNYW1OpPqlRb14ZgfjKzFP8tF7G0qg?usp=sharing
+
+
+
