@@ -38,7 +38,7 @@ namespace HalvaStudio.Save
 
 #if UNITY_EDITOR || UNITY_PS5 || UNITY_STANDALONE
             saveData = (SaveData)LoadPS(typeof(SaveData));
-            saveData.money = 5000;
+            //saveData.money = 5000;
 #elif UNITY_SWITCH
         saveData = (SaveData) LoadSwitch(typeof(SaveData));
 #endif
@@ -232,6 +232,7 @@ namespace HalvaStudio.Save
             public int characterID;
             public int selectedPistolID;
             public int selectedAssaultID;
+            public int selectedCompanionID;
             public int highscore;
             public int xp;
             public int skillPoints;
